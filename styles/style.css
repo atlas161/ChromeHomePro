@@ -1,0 +1,149 @@
+@font-face {
+    font-family: Helvitica;
+    src: url('medias/typo/HelveticaNeueUltraLightv130.ttf') format('truetype');
+}
+
+#background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+#backimg {
+    z-index: 1;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+}
+
+#frontimg {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+#semalogo {
+    position: absolute;
+    width: clamp(30rem, 50vw, 48.75rem);
+    height: auto;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 0.5;
+    z-index: 1;
+}
+
+#weather-clock {
+    position: fixed;
+    top: 1.2rem;
+    left: 1.2rem;
+    background: rgba(255, 255, 255, 0.8);
+    padding: 0.7rem 1rem;
+    border-radius: 0.8rem;
+    font-family: 'Segoe UI', sans-serif;
+    font-size: 1rem;
+    color: rgb(40, 40, 40);
+    z-index: 1000;
+    backdrop-filter: blur(5px);
+    box-shadow: 
+        0 0.3rem 1.25rem rgba(0, 0, 0, 0.8), 
+        inset 0 0.3rem 1.25rem rgba(0, 0, 0, 0.4);
+}
+
+#clock {
+    font-family: "Helvitica", sans-serif;
+    /* font-weight: bold; */
+    font-size: 1.2em;
+    margin-bottom: 0.25rem;
+}
+#weather {
+    font-family: "Helvitica", sans-serif;
+    /* font-weight: bold; */
+    /* font-size: 1.em; */
+    margin-bottom: 0.25rem;
+}
+
+#contentfront {
+    position: relative;
+    display: flex;
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+#bitmojiimg {
+    position: absolute;
+    width: clamp(9.375rem, 11vw, 18.75rem);
+    height: auto;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 1;
+    margin-bottom: 1vw;
+    transition: opacity 0.2s ease;
+    pointer-events: auto;
+    z-index: 3;
+}
+
+#bitmojiimg.hidden {
+    opacity: 0;
+    pointer-events: none;
+}
+
+#toolbar {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: visible;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+}
+
+#icontoolmiddle {
+    background-color: rgba(255, 255, 255, 0.7);
+    border-radius: 2vw;
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 2;
+    overflow: visible;
+    box-shadow: 0 0.3rem 1.25rem rgba(0, 0, 0, 0.8), inset 0 0.3rem 1.25rem rgba(0, 0, 0, 0.4);
+}
+
+#icontoolmiddle img {
+    margin-top: 12%;
+    margin-bottom: 9%;
+    margin-left: clamp(0.2rem, 1vw, 0.625rem);
+    margin-right: clamp(0.2rem, 1vw, 0.625rem);
+    width: clamp(3.25rem, 5vw, 4.375rem);
+    height: auto;
+    transition: box-shadow 0.3s;
+    border-radius: 1.55vw;
+}
+
+#icontoolmiddle img:hover {
+    box-shadow: 0 0.3rem 1.25rem rgba(0, 0, 0, 0.8);
+}
+
+html, body {
+    margin: 0;
+    padding: 0;
+    min-width: 50vw;
+    min-height: 100vh;
+    overflow: auto;
+    font-size: 16px;
+}
